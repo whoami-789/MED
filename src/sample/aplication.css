@@ -13,13 +13,13 @@
 
 .button123
 {
-    -fx-background-color : #4171d1;
+    -fx-background-color : #2D75E8;
 }
-.button:hover
+.button123:hover
 {
     -fx-background-color : #1443a3;
 }
-.button:pressed
+.button123:pressed
 {
     -fx-background-color : #002061;
 }
@@ -34,7 +34,7 @@
 
     -fx-text-fill: white;
     -fx-font-weight: bold;
-    -fx-alignment: CENTER_LEFT;
+    -fx-alignment: CENTER;
 }
 .table-view .cell{
     -fx-cell-size: 30;

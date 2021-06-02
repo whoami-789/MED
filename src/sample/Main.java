@@ -14,7 +14,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception{
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Main.fxml")));
         stage.setTitle("Optimized Med");
-        stage.setScene(new Scene(root, 600, 400));
+        stage.setScene(new Scene(root));
         stage.show();
     }
 
