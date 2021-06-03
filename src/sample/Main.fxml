@@ -75,7 +75,7 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="322.0" stylesheets="@aplication.css" text="Остатки по пленке" textFill="WHITE">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#plenk" prefHeight="55.0" prefWidth="322.0" stylesheets="@aplication.css" text="Остатки по пленке" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="36.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                      <cursor>
