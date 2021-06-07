@@ -24,6 +24,14 @@
     -fx-background-color : #002061;
 }
 
+/*.combo-box:hover
+{
+    -fx-background-color : #1443a3;
+}
+.combo-box:pressed
+{
+    -fx-background-color : #002061;
+}*/
 
 .table-view .column-header,
 .table-view .column-header-background .filler {

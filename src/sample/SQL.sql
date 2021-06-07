@@ -1,1 +1,1 @@
-UPDATE category SET `Price` = '180000' WHERE (`idC` = '3');
+update plenka SET plNum = '100' where idPl = '1'
