@@ -10,8 +10,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class Controller {
 
     @FXML
@@ -118,7 +116,7 @@ public class Controller {
 //      stage.show();
 //  }
 
-    public void btnClick(ActionEvent event) throws IOException{
+    public void btnClick(ActionEvent event){
         if(event.getSource() == btn_zap){
             lab_stat.setText("Запись пациентов");
             grid2.setVisible(true);
