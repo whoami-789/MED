@@ -103,7 +103,7 @@
                <children>
                   <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <TableView prefHeight="200.0" prefWidth="200.0" stylesheets="@aplication.css">
+                        <TableView fx:id="tabs" prefHeight="200.0" prefWidth="200.0" stylesheets="@aplication.css">
                            <columns>
                               <TableColumn prefWidth="75.0" text="ФИО" />
                            </columns>
@@ -111,7 +111,7 @@
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                            </columnResizePolicy>
                         </TableView>
-                        <TableView prefHeight="200.0" prefWidth="200.0" stylesheets="@aplication.css">
+                        <TableView fx:id="tabz" prefHeight="200.0" prefWidth="200.0" stylesheets="@aplication.css" visible="false">
                            <columns>
                               <TableColumn prefWidth="75.0" text="ФИО" />
                            </columns>
@@ -195,7 +195,7 @@
                               <ComboBox id="combox" fx:id="com_time" prefWidth="150.0" stylesheets="@aplication.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
-                        <GridPane fx:id="grid2" prefHeight="357.0" prefWidth="698.0">
+                        <GridPane fx:id="grid2" prefHeight="357.0" prefWidth="698.0" visible="false">
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -245,7 +245,7 @@
                               </Label>
                            </children>
                         </GridPane>
-                        <GridPane fx:id="grid3" prefHeight="357.0" prefWidth="698.0">
+                        <GridPane fx:id="grid3" prefHeight="357.0" prefWidth="698.0" visible="false">
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -277,14 +277,14 @@
                               <Button id="button123" mnemonicParsing="false" prefHeight="32.0" prefWidth="106.0" stylesheets="@aplication.css" text="Удалить" textFill="WHITE" />
                            </children>
                         </HBox>
-                        <HBox fx:id="h2" spacing="5.0">
+                        <HBox fx:id="h2" spacing="5.0" visible="false">
                            <children>
                               <Button id="button123" mnemonicParsing="false" prefHeight="32.0" prefWidth="106.0" stylesheets="@aplication.css" text="Новая запись" textFill="WHITE" />
                               <Button id="button123" mnemonicParsing="false" prefHeight="32.0" prefWidth="106.0" stylesheets="@aplication.css" text="Изменить" textFill="WHITE" />
                               <Button id="button123" mnemonicParsing="false" prefHeight="32.0" prefWidth="106.0" stylesheets="@aplication.css" text="Удалить" textFill="WHITE" />
                            </children>
                         </HBox>
-                        <HBox fx:id="h3" spacing="5.0">
+                        <HBox fx:id="h3" spacing="5.0" visible="false">
                            <children>
                               <Button id="button123" mnemonicParsing="false" prefHeight="32.0" prefWidth="106.0" stylesheets="@aplication.css" text="Изменить" textFill="WHITE" />
                            </children>
@@ -293,7 +293,7 @@
                   </StackPane>
                   <Pane layoutY="62.0" prefHeight="169.0" prefWidth="693.0" style="-fx-background-color: #ffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
-                        <Label fx:id="lab_stat" layoutX="24.0" layoutY="67.0" text="Информация о пациенте" textFill="#2d75e8">
+                        <Label fx:id="lab_stat" layoutX="24.0" layoutY="67.0" text="Список пациентов" textFill="#2d75e8">
                            <font>
                               <Font size="24.0" />
                            </font>

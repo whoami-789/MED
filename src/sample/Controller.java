@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -75,6 +76,12 @@ public class Controller {
     @FXML
     private Label lab_stat;
 
+    @FXML
+    private TableView<?> tabs;
+
+    @FXML
+    private TableView<?> tabz;
+
     public Stage stage;
     public Scene scene;
 
@@ -126,14 +133,32 @@ public class Controller {
             h2.setVisible(true);
             h1.setVisible(false);
             h3.setVisible(false);
+            tabs.setVisible(false);
+            tabz.setVisible(true);
         }
         else if(event.getSource() == btn_spis){
             lab_stat.setText("Список пациентов");
+            grid2.setVisible(false);
+            grid3.setVisible(false);
+            grid1.setVisible(true);
             grid1.toFront();
+            h1.setVisible(true);
+            h2.setVisible(false);
+            h3.setVisible(false);
+            tabs.setVisible(true);
+            tabz.setVisible(false);
         }
         else if(event.getSource() == btn_plenka){
             lab_stat.setText("Изменение колличества пленки");
+            grid3.setVisible(true);
+            grid2.setVisible(false);
+            grid1.setVisible(false);
             grid3.toFront();
+            h1.setVisible(false);
+            h2.setVisible(false);
+            h3.setVisible(true);
+            tabs.setVisible(false);
+            tabz.setVisible(false);
         }
     }
 }

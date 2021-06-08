@@ -1059,128 +1059,136 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="299" parent="286" name="PRIMARY">
+    <index id="299" parent="286" name="plenk">
+      <ColNames>plNum</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="300" parent="286" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idPl</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="300" parent="287" name="idS">
+    <column id="301" parent="287" name="idS">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="301" parent="287" name="OBSL">
+    <column id="302" parent="287" name="OBSL">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="302" parent="287" name="BDate">
+    <column id="303" parent="287" name="BDate">
       <Position>3</Position>
       <DataType>year|0s</DataType>
     </column>
-    <column id="303" parent="287" name="DName">
+    <column id="304" parent="287" name="DName">
       <Position>4</Position>
       <DataType>varchar(45)|0s</DataType>
     </column>
-    <column id="304" parent="287" name="Price">
+    <column id="305" parent="287" name="Price">
       <Position>5</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="305" parent="287" name="Name">
+    <column id="306" parent="287" name="Name">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="306" parent="287" name="DateTime">
+    <column id="307" parent="287" name="DateTime">
       <Position>7</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <index id="307" parent="287" name="OBSL_idx">
+    <index id="308" parent="287" name="PlNum_idx">
+      <ColNames>idS</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="309" parent="287" name="OBSL_idx">
       <ColNames>OBSL</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="308" parent="287" name="Price_idx">
+    <index id="310" parent="287" name="Price_idx">
       <ColNames>Price</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="309" parent="287" name="Name_idx">
+    <index id="311" parent="287" name="Name_idx">
       <ColNames>Name</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="310" parent="287" name="DateTime_idx">
+    <index id="312" parent="287" name="DateTime_idx">
       <ColNames>DateTime</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="311" parent="287" name="PRIMARY">
+    <key id="313" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idS</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="312" parent="287" name="OBSL">
+    <foreign-key id="314" parent="287" name="OBSL">
       <ColNames>OBSL</ColNames>
       <RefTableName>category</RefTableName>
       <RefColNames>OBSL</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="313" parent="287" name="Price">
+    <foreign-key id="315" parent="287" name="Price">
       <ColNames>Price</ColNames>
       <RefTableName>category</RefTableName>
       <RefColNames>Price</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="314" parent="287" name="Name">
+    <foreign-key id="316" parent="287" name="Name">
       <ColNames>Name</ColNames>
       <RefTableName>zapis</RefTableName>
       <RefColNames>Name</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="315" parent="287" name="DateTime">
+    <foreign-key id="317" parent="287" name="DateTime">
       <ColNames>DateTime</ColNames>
       <RefTableName>zapis</RefTableName>
       <RefColNames>DateTime</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="316" parent="288" name="idZ">
+    <column id="318" parent="288" name="idZ">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="317" parent="288" name="Name">
+    <column id="319" parent="288" name="Name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="318" parent="288" name="DateTime">
+    <column id="320" parent="288" name="DateTime">
       <Position>3</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <column id="319" parent="288" name="Tel">
+    <column id="321" parent="288" name="Tel">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <index id="320" parent="288" name="Name">
+    <index id="322" parent="288" name="Name">
       <ColNames>Name</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="321" parent="288" name="DateTime">
+    <index id="323" parent="288" name="DateTime">
       <ColNames>DateTime</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="322" parent="288" name="PRIMARY">
+    <key id="324" parent="288" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idZ</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="323" parent="288" name="Name">
+    <key id="325" parent="288" name="Name">
       <ColNames>Name</ColNames>
       <UnderlyingIndexName>Name</UnderlyingIndexName>
     </key>
-    <key id="324" parent="288" name="DateTime">
+    <key id="326" parent="288" name="DateTime">
       <ColNames>DateTime</ColNames>
       <UnderlyingIndexName>DateTime</UnderlyingIndexName>
     </key>
