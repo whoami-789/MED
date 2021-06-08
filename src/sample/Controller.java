@@ -2,9 +2,6 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -14,7 +11,6 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Objects;
 
 public class Controller {
 
@@ -124,25 +120,22 @@ public class Controller {
 
     public void btnClick(ActionEvent event) throws IOException{
         if(event.getSource() == btn_zap){
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("zap.fxml")));
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+            lab_stat.setText("Запись пациентов");
+            grid2.setVisible(true);
+            grid3.setVisible(false);
+            grid1.setVisible(false);
+            grid2.toFront();
+            h2.setVisible(true);
+            h1.setVisible(false);
+            h3.setVisible(false);
         }
         else if(event.getSource() == btn_spis){
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Main.fxml")));
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+            lab_stat.setText("Список пациентов");
+            grid1.toFront();
         }
         else if(event.getSource() == btn_plenka){
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("plenka.fxml")));
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+            lab_stat.setText("Изменение колличества пленки");
+            grid3.toFront();
         }
     }
 }
